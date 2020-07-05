@@ -1,0 +1,87 @@
+/* CSSのリセット（消さないでください） */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ここからCSS */
+  
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 100);
+    position :fixed;
+    top: 0;
+    z-index: 99;
+  }
+  
+  .logo {
+    width: 150px;
+    padding: 15px 15px;
+    flex: auto;
+  }
+  
+  .header-left {
+    float: left;
+  }
+  
+  .header-right {
+    float: right;
+    margin-right: 15px;
+    display: flex;
+  }
+  
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.726);
+  }
+  
+  .header-right a:hover {
+    background-color: rgba(190, 51, 51, 0.384);
+  }
+
+  /* ここからスライドショー */
+.slideshow img {
+  width: 100%;
+ }
+
+#slideshow {
+  position: relative;
+  width:  100%; /* 画像の横幅に合わせて記述 */
+  /*height: 800px; /* 画像の高さに合わせて記述 */
+}
+#slideshow img {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 8;
+  opacity: 0.0;
+}
+#slideshow img.active {
+  z-index: 10;
+  opacity: 1.0;
+}
+#slideshow img.last-active {
+  z-index: 9;
+}
+/* ここまでスライドショー */
